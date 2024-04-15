@@ -112,7 +112,7 @@ Resources:
     - Feedbackdeliverystream
     Properties:
       Handler: comprehend-realtime-text-classification-lambda.lambda_handler
-      Runtime: python3.7
+      Runtime: python3.9
       Timeout: 450
       Role: !GetAtt ComprehendTextClassificationFunctionRole.Arn
       FunctionName: ComprehendTextClassificationFunction
@@ -261,7 +261,7 @@ Resources:
     DependsOn: Feedbackdeliverystream
     Properties:
       Handler: comprehend-active-learning-user-feedback-via-api-gw-lambda.lambda_handler
-      Runtime: python3.7
+      Runtime: python3.9
       Timeout: 450
       Role: !GetAtt UserFeedbackFunctionExecutionRole.Arn
       FunctionName: UserFeedbackFunction
@@ -327,7 +327,7 @@ Resources:
     DependsOn: Feedbackdeliverystream
     Properties:
       Handler: comprehend-batch-feedback.lambda_handler
-      Runtime: python3.7
+      Runtime: python3.9
       Timeout: 450
       Role: !GetAtt BatchFeedbackFunctionExecutionRole.Arn
       FunctionName: BatchFeedbackFunction
@@ -520,7 +520,7 @@ Resources:
     Type: AWS::Lambda::Function
     Properties:
       Handler: comprehend-create-human-classification-tasks.lambda_handler
-      Runtime: python3.7
+      Runtime: python3.9
       Timeout: 450
       Role: !GetAtt HumanClassificationFunctionExecutionRole.Arn
       FunctionName: HumanClassificationFunction
@@ -661,7 +661,7 @@ Resources:
     Type: AWS::Lambda::Function
     Properties:
       Handler: start-retraining-with-human-reviewed-data.lambda_handler
-      Runtime: python3.7
+      Runtime: python3.9
       Timeout: 450
       Role: !GetAtt HumanReviewTrainingDataTransformerFunctionRole.Arn
       FunctionName: HumanReviewTrainingDataTransformerFunction
